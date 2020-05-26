@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>outputformat_iasyncresult</RootNamespace>
+    <RootNamespace>OutputFormatter.API</RootNamespace>
+    <AssemblyName>OutputFormatter.API</AssemblyName>
   </PropertyGroup>
 
 
