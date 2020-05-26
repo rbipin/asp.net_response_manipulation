@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OutputFormatter.API;
-using OutputFormatter.Controllers;
 using System;
+using System.Linq;
 
-namespace OutputFormatter.Controllers
+namespace Serialize_response_actionfilter.Controllers
 {
     [ApiController]
     [Route("weather")]
@@ -15,9 +14,11 @@ namespace OutputFormatter.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public WeatherForecastController()
-        {
+        private readonly ILogger<WeatherForecastController> _logger;
 
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
         }
 
         [HttpGet("washington")]
@@ -36,8 +37,8 @@ namespace OutputFormatter.Controllers
             };
         }
 
-        [HttpGet("quebeccanada")]
-        [QuebecCanadaOuputFilter]
+        [HttpGet("qubeccanada")]
+        [QubecCanadaOuputFilter]
         public WeatherForecast GetWeatherQubecCanada()
         {
             var rng = new Random();

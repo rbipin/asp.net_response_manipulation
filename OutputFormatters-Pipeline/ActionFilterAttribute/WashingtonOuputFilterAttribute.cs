@@ -20,9 +20,9 @@ namespace OutputFormatter.API
             {
                 new XmlSerializerOutputFormatter(),
                 new SystemTextJsonOutputFormatter(new System.Text.Json.JsonSerializerOptions()),
-                new QubecCanadaOutputFormatter()
+                new QuebecCanadaOutputFormatter()
             };
-            var commonFormatter = new OutputFormatterCommon();
+            var commonFormatter = new FilterActionCommon();
             commonFormatter.ClearOutputFormatters(context, outputFormattersToRemove);
             commonFormatter.AddOutputFormatter(context, washingtonOutputFormat);
             base.OnActionExecuting(context);
