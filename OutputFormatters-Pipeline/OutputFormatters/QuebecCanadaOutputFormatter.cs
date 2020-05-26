@@ -4,13 +4,13 @@ using System.Xml.Serialization;
 
 namespace OutputFormatter.API
 {
-    public class QubecCanadaOutputFormatter : XmlSerializerOutputFormatter
+    public class QuebecCanadaOutputFormatter : XmlSerializerOutputFormatter
     {
-        public QubecCanadaOutputFormatter()
+        public QuebecCanadaOutputFormatter()
         {
 
         }
-        public QubecCanadaOutputFormatter(XmlWriterSettings xmlWriterSettings) : base(xmlWriterSettings)
+        public QuebecCanadaOutputFormatter(XmlWriterSettings xmlWriterSettings) : base(xmlWriterSettings)
         {
 
         }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace OutputFormatter.API
 {
-    public sealed class OutputFormatterCommon
+    public sealed class FilterActionCommon
     {
 
         /// <summary>

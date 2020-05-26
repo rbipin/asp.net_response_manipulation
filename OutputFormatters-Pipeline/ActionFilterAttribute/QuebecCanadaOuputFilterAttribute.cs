@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace OutputFormatter.API
 {
-    public class QubecCanadaOuputFilterAttribute : ActionFilterAttribute
+    public class QuebecCanadaOuputFilterAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            var qubecCanadaOuputFormat = new QubecCanadaOutputFormatter(new System.Xml.XmlWriterSettings()
+            var qubecCanadaOuputFormat = new QuebecCanadaOutputFormatter(new System.Xml.XmlWriterSettings()
             {
                 OmitXmlDeclaration = false
             });
@@ -18,7 +18,7 @@ namespace OutputFormatter.API
                  new SystemTextJsonOutputFormatter(new System.Text.Json.JsonSerializerOptions()),
                 new WashingtonOutputFormatter()
             };
-            var commonFormatter = new OutputFormatterCommon();
+            var commonFormatter = new FilterActionCommon();
             commonFormatter.ClearOutputFormatters(context, outputFormattersToRemove);
             commonFormatter.AddOutputFormatter(context, qubecCanadaOuputFormat);
 
