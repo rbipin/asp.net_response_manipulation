@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
-namespace Serialize_response_actionfilter.Controllers
+namespace Serialize_in_action_filter.Controllers
 {
     [ApiController]
     [Route("weather")]
@@ -37,7 +37,7 @@ namespace Serialize_response_actionfilter.Controllers
             };
         }
 
-        [HttpGet("qubeccanada")]
+        [HttpGet("quebeccanada")]
         [QubecCanadaOuputFilter]
         public WeatherForecast GetWeatherQubecCanada()
         {

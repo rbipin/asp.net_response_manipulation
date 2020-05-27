@@ -1,6 +1,6 @@
 using System;
 
-namespace Serialize_response_actionfilter
+namespace Serialize_in_action_filter
 {
     [Serializable]
     public class WeatherForecast
