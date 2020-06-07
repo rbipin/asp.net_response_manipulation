@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Serialize_in_action_filter.Serializer
+namespace OutputFormatter.API.Serializer
 {
     public class QuebecCanadaOutputSerializer
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutputFormatter.API", "Serialize_in_action_filter\OutputFormatter.API.csproj", "{B67FE717-F557-47A3-BC7F-3A4235D199FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutputFormatter.API", "OutputFormatters_in_result\OutputFormatter.API.csproj", "{B67FE717-F557-47A3-BC7F-3A4235D199FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

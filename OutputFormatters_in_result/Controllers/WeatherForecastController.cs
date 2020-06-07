@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
-namespace Serialize_in_action_filter.Controllers
+namespace OutputFormatter.API.Controllers
 {
     [ApiController]
     [Route("weather")]

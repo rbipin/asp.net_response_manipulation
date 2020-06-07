@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Serialize_in_action_filter.Serializer;
+using OutputFormatter.API.OutputFormatter;
 using System.Text;
 
-namespace Serialize_in_action_filter
+namespace OutputFormatter.API
 {
     public class WashingtonOuputFilterAttribute : ActionFilterAttribute
     {
@@ -15,10 +15,7 @@ namespace Serialize_in_action_filter
                base.OnResultExecuting(context);
             }
             var result = context.Result as ObjectResult;
-            var serializedResult = WashingtonOutputSerializer.Instance.Serialize(result.Value);
-            var resultBytes = Encoding.UTF8.GetBytes(serializedResult);
-            response.Headers.Add("Content-Type","application/xml");
-            await response.Body.WriteAsync(resultBytes, 0, resultBytes.Length);
+            result.Formatters.Add(new WashingtonOutputFormatter());
             base.OnResultExecuting(context);
         }
     }
