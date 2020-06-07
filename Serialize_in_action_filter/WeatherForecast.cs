@@ -1,6 +1,6 @@
 using System;
 
-namespace Serialize_response_actionfilter
+namespace OutputFormatter.API
 {
     [Serializable]
     public class WeatherForecast

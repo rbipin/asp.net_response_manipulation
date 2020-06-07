@@ -8,7 +8,7 @@ using System.Text.Encodings;
 using System.Text;
 using System.IO;
 
-namespace Serialize_in_action_filter.Serializer
+namespace OutputFormatter.API.Serializer
 {
     public sealed class XMLSerializer
     {

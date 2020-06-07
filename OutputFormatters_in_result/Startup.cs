@@ -1,10 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using OutputFormatter.API.Middleware;
 
-namespace Serialize_response_actionfilter
+namespace OutputFormatter.API
 {
     public class Startup
     {
@@ -32,6 +39,7 @@ namespace Serialize_response_actionfilter
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSimpleMiddleware();
 
             app.UseEndpoints(endpoints =>
             {

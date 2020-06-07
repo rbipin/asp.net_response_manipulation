@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Serialize_in_action_filter
+namespace OutputFormatter.API
 {
     public class Program
     {

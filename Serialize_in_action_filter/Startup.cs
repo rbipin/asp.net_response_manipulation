@@ -9,9 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Serialize_in_action_filter.Middleware;
+using OutputFormatter.API.Middleware;
 
-namespace Serialize_in_action_filter
+namespace OutputFormatter.API
 {
     public class Startup
     {
